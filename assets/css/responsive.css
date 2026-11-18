@@ -1,0 +1,133 @@
+/* ==========================================================================
+   M/S. Cooling Point: responsive.css
+   Mobile-first breakpoint enhancements (aligned with Bootstrap 5.3):
+   sm ≥576 · md ≥768 · lg ≥992 · xl ≥1200 · xxl ≥1400
+   SOURCE FILE: after editing, run `npm run build` to regenerate site.min.css
+   ========================================================================== */
+
+/* ---------- Small phones (≤ 380px) ---------- */
+@media (max-width: 575.98px) {
+  .cp-map__label { font-size: 15px; stroke-width: 5px; }
+  .cp-gallery-item__overlay { padding: 0.75rem; }
+  .cp-gallery-item__title { font-size: 0.85rem; }
+  .cp-gallery-item__cat { font-size: 0.6rem; }
+}
+@media (max-width: 379.98px) {
+  .cp-logo__tag { display: none; }
+  .cp-logo__name { font-size: 1.08rem; }
+  .cp-hero__actions .cp-btn { width: 100%; }
+  .cp-location-grid { grid-template-columns: 1fr; }
+  .cp-brand-tile__name { font-size: 1rem; }
+}
+
+/* ---------- ≥ 576px ---------- */
+@media (min-width: 576px) {
+  .cp-checklist { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cp-included { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cp-masonry { column-gap: 1.25rem; }
+  .cp-gallery-item { margin-bottom: 1.25rem; }
+  .cp-location-card__arrow { display: block; }
+  .cp-form-card { padding: 2.25rem 2rem; }
+  .cp-brand-tile { flex-basis: calc(33.333% - 0.57rem); }
+  .cp-footer__bottom { flex-direction: row; justify-content: space-between; align-items: center; }
+  .cp-lightbox__figure { padding: 5rem 5.5rem 6rem; }
+  .cp-lightbox__prev, .cp-lightbox__next { bottom: auto; top: 50%; margin-top: -25px; }
+  .cp-lightbox__prev:hover { transform: translateX(-3px); }
+}
+
+/* ---------- ≥ 768px ---------- */
+@media (min-width: 768px) {
+  :root { --cp-section-y: 6.25rem; --cp-header-h: 84px; }
+  .cp-stats__card { grid-template-columns: repeat(2, 1fr); }
+  .cp-stat { border-bottom: 1px solid var(--cp-line); }
+  .cp-stat:nth-child(odd) { border-right: 1px solid var(--cp-line); }
+  .cp-stat:nth-last-child(-n + 2) { border-bottom: 0; }
+  .cp-process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cp-about-media { padding: 0 0 4rem 0; }
+  .cp-about-media__badge { left: -1.25rem; top: 2rem; }
+  .cp-testimonial { padding: 2.75rem 2.5rem 2.25rem; }
+  .cp-cta { padding: 7rem 0; }
+  .cp-map-panel { padding: 1.75rem; }
+  .cp-location-grid { gap: 0.9rem; }
+  .cp-page-hero { padding: calc(var(--cp-header-h) + 5.5rem) 0 6rem; }
+}
+
+/* ---------- ≥ 992px ---------- */
+@media (min-width: 992px) {
+  :root { --cp-section-y: 7.5rem; }
+  .cp-header__cta { display: inline-flex; }
+  .cp-hero { padding-bottom: 9rem; }
+  .cp-hero__visual { display: block; }
+  .cp-stats { margin-top: -6rem; }
+  .cp-stats__card { grid-template-columns: repeat(4, 1fr); }
+  .cp-stat { flex-direction: column; gap: 1.1rem; padding: 2.1rem 1.75rem; border-bottom: 0; border-right: 1px solid var(--cp-line); }
+  .cp-stat:nth-child(odd) { border-right: 1px solid var(--cp-line); }
+  .cp-stat:last-child { border-right: 0; }
+  .cp-stat__value { font-size: 1.7rem; }
+  .cp-masonry { columns: 3; }
+  .cp-brand-tile { flex-basis: calc(20% - 0.68rem); }
+  .cp-scroll-indicator { display: flex; bottom: calc(6rem + 1.25rem); }
+  .cp-section-head--split { display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem; }
+  .cp-section-head--split > * + * { margin-top: 0; }
+  .cp-section-head--split > :first-child { flex: 1 1 55%; }
+  .cp-section-head--split > :last-child { flex: 0 1 40%; }
+  .cp-section-head--split .cp-lead { margin-bottom: 0.4rem; }
+  .cp-process { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .cp-process::before { content: ""; position: absolute; top: 3.2rem; left: 8%; right: 8%; height: 1px; background: repeating-linear-gradient(90deg, var(--cp-line-strong) 0 6px, transparent 6px 12px); z-index: 0; }
+  .cp-section--dark .cp-process::before { background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 6px, transparent 6px 12px); }
+  .cp-step { z-index: 1; }
+  .cp-sidebar { position: sticky; top: calc(var(--cp-header-h) + 1.5rem); }
+  .cp-service-row { padding: 4.5rem 0; }
+  .cp-form-card { padding: 2.75rem 2.5rem; }
+  .cp-map-panel { min-height: 560px; }
+  .cp-footer { padding-top: 6rem; }
+  .cp-whatsapp-float { right: 1.5rem; bottom: 1.5rem; }
+  .cp-backtotop { right: 1.95rem; bottom: 6.1rem; }
+}
+
+/* ---------- ≥ 1200px: full desktop navigation ---------- */
+@media (min-width: 1200px) {
+  .cp-nav { display: block; }
+  .cp-burger { display: none; }
+  .cp-header__phone { display: inline-flex; }
+  .cp-mobile-menu { display: none; }
+  .cp-hero__visual { height: 560px; }
+  .cp-float-slot--2 { left: -10%; }
+  .cp-brand-tile { min-height: 128px; }
+  .cp-testimonial { padding: 3.25rem 3rem 2.5rem; }
+}
+
+/* Tighter nav between 1200 and 1399 so everything fits on one line */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .cp-nav__link { padding: 0.6rem 0.65rem; font-size: 0.92rem; }
+  .cp-nav__link::after { left: 0.65rem; right: 0.65rem; }
+  .cp-header__phone { display: none; }
+}
+
+/* ---------- ≥ 1400px ---------- */
+@media (min-width: 1400px) {
+  .cp-hero__title { letter-spacing: -0.04em; }
+  .cp-float-slot--2 { left: -14%; }
+}
+
+/* ---------- Short landscape screens (phones turned sideways) ---------- */
+@media (max-height: 520px) and (orientation: landscape) {
+  .cp-hero { min-height: auto; padding-top: calc(var(--cp-header-h) + 2rem); padding-bottom: 6rem; }
+  .cp-scroll-indicator { display: none; }
+  .cp-mobile-menu__link { font-size: 1.25rem; padding: 0.6rem 0.25rem; }
+}
+
+/* ---------- Touch devices: no hover-only reveals ---------- */
+@media (hover: none) {
+  .cp-gallery-item__overlay { opacity: 1; background: linear-gradient(180deg, rgba(7, 29, 50, 0) 55%, rgba(7, 29, 50, 0.85) 100%); }
+  .cp-gallery-item__cat, .cp-gallery-item__title { transform: none; }
+  .cp-gallery-item__zoom { display: none; }
+  .cp-whatsapp-float__tip { display: none; }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .cp-header, .cp-mobile-menu, .cp-whatsapp-float, .cp-backtotop, .cp-scroll-indicator, .cp-hero__visual, .cp-cta__bg, .cp-hero__media { display: none !important; }
+  .cp-hero, .cp-page-hero, .cp-section--dark, .cp-cta, .cp-footer { background: #fff !important; color: #000 !important; }
+  .cp-hero__title, .cp-page-hero__title, h1, h2, h3 { color: #000 !important; -webkit-text-fill-color: #000 !important; }
+}
