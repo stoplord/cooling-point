@@ -1,0 +1,18 @@
+{
+  "name": "cooling-point-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "M/S. Cooling Point: static marketing website (HTML5, CSS3, Bootstrap 5.3, GSAP, AOS, Swiper).",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js && npm run build:bootstrap",
+    "build:css": "cat assets/css/style.css assets/css/animations.css assets/css/responsive.css | esbuild --loader=css --minify --target=es2019,chrome90,safari14 --log-level=warning > assets/css/site.min.css",
+    "build:js": "cat assets/js/main.js assets/js/animations.js | esbuild --loader=js --minify --target=es2019 --log-level=warning > assets/js/site.min.js",
+    "serve": "php -S localhost:8080",
+    "serve:static": "npx --yes http-server -p 8080 -c-1 .",
+    "build:bootstrap": "node tools/purge-bootstrap.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "purgecss": "7.0.2"
+  }
+}
